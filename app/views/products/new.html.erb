@@ -1,18 +1,3 @@
 <h1>New product</h1>
+<%= render "form", product: @product %>
 
-<%= form_with model: @product do |form| %>
-  <div>
-    <%= form.label :name %>
-    <%= form.text_field :name %>
-    <%= form.label :price %>
-    <%= form.number_field :price, step: 0.01 %>
-    <%= form.label :quantity %>
-    <%= form.number_field :quantity %>
-  </div>
-
-  <div>
-    <%= form.submit %>
-  </div>
-<% end %>
-
-<%= link_to "Cancel", products_path %>
