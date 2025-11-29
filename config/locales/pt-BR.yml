@@ -32,3 +32,7 @@
       title: "Novo %{model}"
     edit: 
       title: "Editar %{model}"
+    index:
+      title: "Lista de Supermercado"
+      subtitle: "Esses são nossos produtos:"
+      button: "Adicione aqui o seu produto"
