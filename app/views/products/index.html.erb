@@ -1,12 +1,30 @@
-<h1>Products#index</h1>
-<p> Esses são nossos produtos </p>
-<div id="products">
-  <% @products.each do |product| %>
-    <div>
-      <%= product.id %> - <%= link_to product.name, product_path(product) %>
-    </div>
-    
-  <% end %>
+<div class="table-container">
+  <h1><%= t('views.index.title') %></h1>
+  <p><%= t('views.index.description', model: t('activerecord.models.product.other')).downcase %></p>
+
+  <table class="products-table" role="table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th><%= t('activerecord.attributes.product.name') %></th>
+        <th><%= t('views.index.actions', default: 'Ações') %></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @products.each do |product| %>
+        <tr>
+          <td><%= product.id %></td>
+          <td><%= link_to product.name, product_path(product), class: 'btn btn--outline' %></td>
+          <td>
+            <%= link_to t('views.index.view', default: 'Ver'), product_path(product), class: 'btn btn--outline' %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <div style="margin-top:1rem; text-align:center;">
+    <%= link_to "New product", products_new_path, class: 'btn btn--success' %>
+  </div>
 </div>
-<%= link_to "New product", products_new_path %>
 

@@ -32,3 +32,6 @@
       title: "Novo %{model}"
     edit: 
       title: "Editar %{model}"
+    index: 
+      title: "Lista de compras"
+      description: "Comprar os seguintes %{model}"

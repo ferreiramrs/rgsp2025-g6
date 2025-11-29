@@ -1,19 +1,25 @@
-<%= form_with model: @product do |form| %>
-  <% if form.object.errors.any? %>
-    <p class="error"><%= form.object.errors.full_messages.first %></p>
-  <% end %>
-  <div>
-    <%= form.label :name %>
-    <%= form.text_field :name %>
-    <%= form.label :price %>
-    <%= form.number_field :price, step: 0.01 %>
-    <%= form.label :quantity %>
-    <%= form.number_field :quantity %>
-  </div>
+<div class="form-container">
+    <div class="form-box">
+        <%= form_with model: @product do |form| %>
+            <% if form.object.errors.any? %>
+                <p class="error"><%= form.object.errors.full_messages.first %></p>
+            <% end %>
 
-  <div>
-    <%= form.submit %>
-  </div>
-<% end %>
+            <div class="fields">
+                <%= form.label :name %>
+                <%= form.text_field :name %>
 
-<%= link_to t('helpers.links.cancel'), products_path %>
+                <%= form.label :price %>
+                <%= form.number_field :price, step: 0.01 %>
+
+                <%= form.label :quantity %>
+                <%= form.number_field :quantity %>
+            </div>
+
+            <div class="actions">
+                <%= form.submit nil, class: 'btn btn--success' %>
+                <%= link_to t('helpers.links.cancel'), products_path, class: 'btn btn--cancel' %>
+            </div>
+        <% end %>
+    </div>
+</div>
