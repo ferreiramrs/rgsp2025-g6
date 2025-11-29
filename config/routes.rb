@@ -7,7 +7,8 @@ Rails.application.routes.draw do
   get "/products", to: "products#index"
   get "/products/new", to: "products#new"
   post "/products", to: "products#create"
-  resources :products, only: [:show, :edit, :update]
+  resources :products, only: [:show, :edit, :update, :destroy]
+  
   # Render dynamic PWA files from app/views/pwa/* (remember to link manifest in application.html.erb)
   # get "manifest" => "rails/pwa#manifest", as: :pwa_manifest
   # get "service-worker" => "rails/pwa#service_worker", as: :pwa_service_worker
