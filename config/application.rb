@@ -23,5 +23,8 @@ module Rgsp2025G6
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+    # Set default locale to Brazilian Portuguese and allow it alongside English
+    config.i18n.default_locale = :'pt-BR'
+    config.i18n.available_locales = [:en, :'pt-BR']
   end
 end
