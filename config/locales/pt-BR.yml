@@ -20,3 +20,15 @@
               blank: "não pode ficar em branco"
             quantity:
               blank: "não pode ficar em branco"
+  helpers:
+    submit:
+      create: "Criar %{model}"
+      update: "Atualizar %{model}"
+      submit: "Salvar"
+    links:
+      cancel: "Cancelar"
+  views:
+    new: 
+      title: "Novo %{model}"
+    edit: 
+      title: "Editar %{model}"
