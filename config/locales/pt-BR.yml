@@ -1,0 +1,22 @@
+"pt-BR":
+  activerecord:
+    models:
+      product:
+        one: "Produto"
+        other: "Produtos"
+    attributes:
+      product:
+        name: "Nome"
+        price: "Preço"
+        quantity: "Quantidade"
+    errors:
+      models:
+        product:
+          attributes:
+            name:
+              blank: "não pode ficar em branco"
+              taken: "já está em uso"
+            price:
+              blank: "não pode ficar em branco"
+            quantity:
+              blank: "não pode ficar em branco"
